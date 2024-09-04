@@ -1,0 +1,29 @@
+1. Noise During Sleep
+Criteria: Frequency, intensity, type of noise, impact on sleep quality.
+Analysis: Evaluate the frequency and intensity of noise to determine potential sleep disruptions. Consider the type of noise (e.g., traffic, household) as it might indicate specific environmental stressors.
+Conclusion: Determine if noise is a significant factor affecting sleep quality and overall well-being.
+
+2. Temperature During Sleep
+Criteria: Preferred temperature, temperature fluctuations, impact on sleep comfort.
+Analysis: Assess the patient's ideal sleep temperature and any discrepancies between preferred and actual temperature. Consider the frequency of temperature fluctuations and their impact on sleep quality.
+Conclusion: Determine if temperature is a contributing factor to sleep disturbances or overall discomfort.
+
+3. Sleep Continuity
+Criteria: Frequency of awakenings, duration of awakenings, reasons for awakenings.
+Analysis: Evaluate the number and duration of awakenings per night. Consider the patient's reported reasons for waking up (e.g., bathroom, discomfort, worries).
+Conclusion: Determine the severity of sleep fragmentation and potential underlying causes.
+
+4. Thoughts Before Sleep
+Criteria: Content of thoughts (positive, negative, neutral), intensity of thoughts, frequency of occurrence.
+Analysis: Assess the nature of the patient's pre-sleep thoughts. Consider the emotional tone and how these thoughts impact sleep onset.
+Conclusion: Determine if pre-sleep thoughts are contributing to sleep difficulties or reflecting underlying emotional issues.
+
+5. Thoughts After Waking Up
+Criteria: Mood upon waking, energy levels, cognitive function.
+Analysis: Evaluate the patient's emotional state and energy levels immediately after waking. Consider any difficulties with concentration or focus.
+Conclusion: Determine the impact of sleep quality on overall mood and daytime functioning.
+
+6. Kind of Dreams
+Criteria: Dream content (positive, negative, neutral), frequency of nightmares, vividness of dreams.
+Analysis: Assess the emotional tone of the dreams and their potential impact on sleep quality. Consider the frequency of nightmares as an indicator of potential distress.
+Conclusion: Determine if dream patterns are related to sleep disturbances or emotional well-being.

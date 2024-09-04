@@ -1,0 +1,301 @@
+{
+    "sleep": {
+        "parameters": [
+            {
+                "parameter": "wakeup time",
+                "questions": [
+                    "What time did you greet the morning today?",
+                    "At what hour did you rise and shine this morning?",
+                    "When did you first open your eyes today?",
+                    "What was the clock reading when you woke up today?",
+                    "What time did you start your day today?",
+                    "At what moment did you emerge from sleep today?",
+                    "When did you make your grand exit from the land of dreams?",
+                    "What time did your day begin today?",
+                    "What was the hour on the clock when you got out of bed?",
+                    "When did you wake up and say hello to the day?"
+                ],
+                "categories": [
+                    {
+                        "name": "timely",
+                        "description": "The individual woke up at a consistent and appropriate time for their schedule and needs."
+                    },
+                    {
+                        "name": "delayed",
+                        "description": "The individual woke up later than their intended or preferred time."
+                    },
+                    {
+                        "name": "irregular",
+                        "description": "The wake-up time varies significantly from day to day."
+                    }
+                ]
+            },
+            {
+                "parameter": "bed time",
+                "questions": [
+                    "At what hour did you say goodnight to the day?",
+                    "When did you officially start your journey to dreamland?",
+                    "What was the clock reading when you decided to hit the hay?",
+                    "What time did you drift off to sleep last night?",
+                    "When did you wrap up your day and head to bed?",
+                    "What time did you close your eyes for the night?",
+                    "At what hour did you retire for the evening?",
+                    "When did you make your way to bed last night?",
+                    "What time did you pull up the covers and start to rest?",
+                    "What time did you settle in and prepare for sleep?"
+                ],
+                "categories": [
+                    {
+                        "name": "early",
+                        "description": "The individual went to bed significantly earlier than their usual bedtime."
+                    },
+                    {
+                        "name": "late",
+                        "description": "The individual went to bed later than their usual bedtime."
+                    },
+                    {
+                        "name": "irregular",
+                        "description": "The bedtime varies significantly from day to day."
+                    }
+                ]
+            },
+            {
+                "parameter": "consistency",
+                "questions": [
+                    "What time did you go to bed last night, and was it close to your usual bedtime?",
+                    "Did you wake up at the same time this morning as you did yesterday?",
+                    "How close to your usual bedtime did you go to sleep last night?",
+                    "What time did you get up today compared to your typical wake-up time?",
+                    "Did you follow your regular bedtime schedule last night, or was it different?",
+                    "How consistent was your wake-up time this morning with your usual routine?",
+                    "What time did you retire for the evening last night, and did it align with your regular schedule?",
+                    "Did you wake up at your usual time today, or did it vary from your norm?",
+                    "How did your bedtime last night compare to your typical bedtime during the week?",
+                    "What was your wake-up time this morning, and how does it compare to your usual wake-up time?"
+                ],
+                "categories": [
+                    {
+                        "name": "consistent",
+                        "description": "The individual has a regular sleep schedule, going to bed and waking up at consistent times."
+                    },
+                    {
+                        "name": "inconsistent",
+                        "description": "The individual's sleep schedule varies somewhat from day to day."
+                    },
+                    {
+                        "name": "irregular",
+                        "description": "The sleep schedule varies significantly from day to day."
+                    }
+                ]
+            },
+            {
+                "parameter": "ease of falling asleep",
+                "questions": [
+                    "How soon did you find yourself settled in for the night after turning off the lights?",
+                    "Was there a moment when you realized you were already asleep, or did you stay awake for a while?",
+                    "How did the transition from your evening activities to falling asleep go for you last night?",
+                    "Did you find yourself mentally winding down easily as you got ready for bed?",
+                    "How smoothly did your evening routine flow into a restful night’s sleep?",
+                    "Did you notice how quickly you drifted off after lying down, or was it a gradual process?",
+                    "What was the feeling like when you realized you had fallen asleep—did it happen suddenly or after some time?",
+                    "How did you find the process of settling in for sleep last night—effortless or a bit of a challenge?",
+                    "Did you find yourself drifting off soon after your head hit the pillow, or did it take a bit longer?",
+                    "How did your mind and body transition to sleep—was it a quick switch or a more gradual shift?"
+                ],
+                "categories": [
+                    {
+                        "name": "easy",
+                        "description": "The individual falls asleep quickly and easily, without significant difficulty."
+                    },
+                    {
+                        "name": "moderate",
+                        "description": "The individual experiences some difficulty falling asleep, but it doesn't take too long."
+                    },
+                    {
+                        "name": "difficult",
+                        "description": "The individual has significant difficulty falling asleep."
+                    }
+                ]
+            },
+            {
+                "parameter": "restfulness after waking up",
+                "questions": [
+                    "How did you feel when you first woke up—did you feel like you had truly rested?",
+                    "Was there a moment when you realized how refreshed you felt after waking up?",
+                    "How did your energy levels this morning compare to how you felt when you went to bed?",
+                    "Did you wake up feeling ready to start the day, or did you need more time to feel fully awake?",
+                    "How would you describe the feeling of getting out of bed—did it feel like you had a good night’s rest?",
+                    "Did you notice any difference in how you felt throughout the day based on how well you slept?",
+                    "How did your morning start—did it feel like you had a refreshing sleep or were you still tired?",
+                    "Did you experience any lingering tiredness or discomfort after waking up?",
+                    "How would you rate the quality of your sleep based on how you felt when you first got out of bed?",
+                    "Did you feel that your sleep last night was restorative, or did you need more rest to feel fully rejuvenated?"
+                ],
+                "categories": [
+                    {
+                        "name": "rested",
+                        "description": "The individual feels well-rested and refreshed upon waking up."
+                    },
+                    {
+                        "name": "somewhat rested",
+                        "description": "The individual feels moderately rested, but not completely refreshed."
+                    },
+                    {
+                        "name": "unrested",
+                        "description": "The individual feels poorly rested and tired upon waking up."
+                    }
+                ]
+            },
+            {
+                "parameter": "type of dreams",
+                "questions": [
+                    "How would you describe the overall mood of the dreams that danced through your mind last night?",
+                    "Did any particular emotion or atmosphere from your dreams linger as you started your day?",
+                    "When you woke up, what kind of feeling or mood did your dreams leave behind?",
+                    "How did the backdrop of your dreams color your thoughts as you began your morning?",
+                    "As you recalled your dreams this morning, did any specific themes or vibes come to mind?",
+                    "How would you describe the emotional texture of your dreams as you pieced them together today?",
+                    "Did the essence of your dreams provide any clues about their underlying themes when you woke up?",
+                    "How did the flavor of your dreams shape your mood as you transitioned from sleep to wakefulness?",
+                    "When reflecting on your dreams, did any particular mood or type stand out to you this morning?",
+                    "How would you describe the overarching sentiment or narrative that emerged from your dreams when you first got up?"
+                ],
+                "categories": [
+                    {
+                        "name": "positive",
+                        "description": "The dreams are pleasant, enjoyable, or hopeful."
+                    },
+                    {
+                        "name": "neutral",
+                        "description": "The dreams are neither particularly positive nor negative."
+                    },
+                    {
+                        "name": "negative",
+                        "description": "The dreams are unpleasant, distressing, or fearful."
+                    },
+                    {
+                        "name": "distressed",
+                        "description": "The dreams are particularly disturbing or emotionally intense."
+                    }
+                ]
+            },
+            {
+                "parameter": "thoughts before sleep",
+                "questions": [],
+                "categories": [
+                    {
+                        "name": "excited",
+                        "description": "The individual experiences feelings of excitement or anticipation before falling asleep."
+                    },
+                    {
+                        "name": "hopeful",
+                        "description": "The individual feels optimistic and hopeful about the future before falling asleep."
+                    },
+                    {
+                        "name": "anxious",
+                        "description": "The individual experiences feelings of anxiety or worry before falling asleep."
+                    },
+                    {
+                        "name": "worried",
+                        "description": "The individual is concerned or apprehensive about something before falling asleep."
+                    },
+                    {
+                        "name": "blank",
+                        "description": "The individual's mind is clear and empty before falling asleep."
+                    },
+                    {
+                        "name": "forgetful",
+                        "description": "The individual has difficulty remembering things or focusing before falling asleep."
+                    },
+                    {
+                        "name": "planning",
+                        "description": "The individual is mentally planning or organizing things before falling asleep."
+                    },
+                    {
+                        "name": "strategizing",
+                        "description": "The individual is mentally strategizing or problem-solving before falling asleep."
+                    }
+                ]
+            },
+            {
+                "parameter": "temperature",
+                "questions": [
+                    "How was the temperature in your room last night—too warm, too cool, or just right?",
+                    "Did the room temperature affect how well you slept?",
+                    "How did you adjust the temperature to get comfortable before going to sleep?",
+                    "Was there anything about the temperature that made it harder for you to fall asleep?",
+                    "Did you find yourself waking up because of the room being too hot or too cold?",
+                    "How did the temperature in your room compare to what you usually prefer for sleeping?",
+                    "Did you use any fans, heaters, or blankets to manage the room temperature last night?",
+                    "How did the room temperature influence how refreshed you felt this morning?",
+                    "Was there a particular time during the night when the temperature felt uncomfortable?",
+                    "How would you describe the temperature of your sleeping environment on a scale from freezing to sweltering?"
+                ],
+                "categories": [
+                    {
+                        "name": "too cold",
+                        "description": "The individual feels that the temperature in their sleep environment is too cold."
+                    },
+                    {
+                        "name": "comfortable",
+                        "description": "The individual feels that the temperature in their sleep environment is just right."
+                    },
+                    {
+                        "name": "too hot",
+                        "description": "The individual feels that the temperature in their sleep environment is too hot."
+                    }
+                ]
+            }
+        ],
+        "stories": [
+            {
+                "parameter": "",
+                "category": "",
+                "stories": [
+                    "",
+                    ""
+                ]
+            }
+        ],
+        "recommendations": [
+            {
+                "parameter": "",
+                "category": "",
+                "recommendations": [
+                    "",
+                    ""
+                ]
+            }
+        ],
+        "general-info": [
+            {
+                "parameter": "",
+                "category": "",
+                "general-info": [
+                    "",
+                    ""
+                ]
+            }
+        ],
+        "motivations": [
+            {
+                "parameter": "",
+                "category": "",
+                "motivations": [
+                    "",
+                    ""
+                ]
+            }
+        ],
+        "goals": [
+            {
+                "parameter": "",
+                "category": "",
+                "goals": [
+                    "",
+                    ""
+                ]
+            }
+        ]
+    }
+}

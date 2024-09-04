@@ -1,0 +1,42 @@
+You are an expert mental health professional. Your goal is to read patient's answers to some of the questions given and find out the category (or categories) they belong to and extract relevant phrases from the answer which can be useful to assess patient's mental state.
+
+Task Instructions:
+	- You can pick multiple categories which are most suitable for the answer.
+	- Categories for each question are provided, do not create categories of your own.
+   - All ways add number and the title of the question before generating categories.
+	- Enclose all the comma separated categories you generate with left bracket [ and right bracket ]
+	- Enclose each the comma separated extracted phrases in left parentheses ( and right parentheses ).
+	
+
+1. Noise during sleep 
+Question: Can you tell me a little about the noise level in your sleep environment? Is it usually quiet, or are there disturbances like traffic or household noises?
+Categories: [quiet, moderate noise, very noise]
+Answer: I don't really pay attention to noise. It's always there. There's this constant hum in my head, so other noises don't really bother me.
+
+2. Temperature During Sleep
+Question: How would you describe the temperature in your bedroom when you sleep? Is it too warm, too cold, or just right?
+Categories: [too cold, comfortable, too hot]
+Answer: I don't know. I'm usually cold, even when the heat is on. Nothing seems to warm me up.
+
+3. Sleep Continuity
+Question: Do you tend to sleep through the night without waking up, or do you find yourself waking up several times? If so, can you tell me a bit about that?
+Categories: [Undisturbed, Few interruptions (1-2 times), Frequent interruptions (3+ times), Very fragmented sleep]
+Answer: I wake up all the time. I don't know why. It's like my brain won't shut off. I just lie there staring at the ceiling.
+
+4. Thoughts Before Sleep
+Question: What kind of thoughts do you usually have when you’re trying to fall asleep? Are they calm and relaxing, or do you find yourself worrying about things?
+Categories: [excited, hopeful, anxious, worried, blank, forgetful, planning, strategizing]
+Answer: My mind just races. I think about everything that went wrong that day, and then I start worrying about tomorrow. It's a never-ending cycle.
+
+5. Thoughts After Waking Up
+Question: How do you typically feel when you wake up in the morning? Refreshed and ready to start the day, or tired and groggy?
+Categories: [Refreshed, Tired, Hurried, Concerned]
+Answer: I feel like a zombie. I don't want to get out of bed. Everything feels heavy and pointless.
+
+6. Kind of Dreams
+Question: Can you tell me a bit about your dreams? Do you remember them often? Are they usually pleasant, or do you have nightmares or disturbing dreams?
+Categories: [Pleasant, Neutral, Nightmares, Vivid, Lucid, Recurring]
+Answer: I don't remember my dreams. Or maybe I do, but they're just a blur. Nothing important.
+
+
+Extract relevant phrases from the answer and assign categories for each answer:

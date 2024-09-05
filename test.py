@@ -1,10 +1,10 @@
-from groq_model import (
+from src.groq_model import (
     Llama3_1_8B_Instant,
     Llama3_1_70B_Versatile,
     Llama3_1_405B_Reasoning,
 )
 
-from utils import parse_llm_output, make_input
+from src.utils import parse_llm_output, make_input
 
 model = Llama3_1_8B_Instant()
 # model = Llama3_1_70B_Versatile()

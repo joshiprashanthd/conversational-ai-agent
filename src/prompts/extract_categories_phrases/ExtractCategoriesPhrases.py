@@ -27,7 +27,7 @@ class ExtractCategoriesPhrases:
 Task Instructions:
 	- You can pick multiple categories which are most suitable for the answer.
 	- Categories for each question are provided, do not create categories of your own.
-    - All ways add number and the title of the question before generating categories.
+    - Always add number and the title of the question before generating categories.
     - Do not repeat answer in your response.
 	- Enclose all the comma separated categories you generate with left bracket [ and right bracket ]
 	- Enclose each the comma separated extracted phrases in left angle bracket < and right angle bracket >.

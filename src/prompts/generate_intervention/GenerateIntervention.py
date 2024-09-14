@@ -3,26 +3,24 @@ from typing import TypedDict
 import re
 
 
-class Input(TypedDict):
+class TGenerateInteventionInput(TypedDict):
     parameter: str
     current_state: str
-    current_state: str
+    target_state: str
     topic: str
 
-
-class Response(TypedDict):
+class TGenerateInterventionResponse(TypedDict):
     reasoning: str
     activity: str
-
 
 class GenerateIntervention:
     def __init__(self, llm: GroqModel):
         self.llm = llm
 
     def build_prompt(self, input: Input):
-        self.prompt = """We are gathering information about patient's sleep health. This information consist of various parameters each having some categories. A category describes the broad state of patient's sleep health in terms of the parameter. 
+        self.prompt = """We are gathering information about patient's sleep health. This information consist of various parameters each having some categories. A category describes the broad state of patient's sleep health in terms of the parameter.
 
-Your goal is to make (reason, activity) pairs. An activity should be created such that it somehow changes the state of parameter from on category to another category. 
+Your goal is to make (reason, activity) pairs. An activity should be created such that it somehow changes the state of parameter from on category to another category.
 Activities should be related to the topic given, for example if the topic is "yoga" then activity will have to contain some asanas that comes under yoga.
 
 For example, suppose the category of parameter "thoughts before sleep" is "worried". This means that patient is worried about something before going to sleep. An activity like "go for a walk" could make the patient less "worried" and more "calm". This is how we can change the category of one parameter to other parameter by suggesting some activity.
@@ -66,14 +64,13 @@ Output:"""
             return match
         return ""
 
-    def process_response(self, response: str) -> Response:
-        res: Response = {
+    def process_response(self, response: str) -> TGenerateInterventionResponse:
+        return {
             "activity": self.extract_strings(response, "["),
             "reasoning": self.extract_strings(response, "<"),
         }
-        return res
 
-    def __call__(self, input: Input):
+    def __call__(self, input: TGenerateInteventionInput) -> TGenerateInterventionResponse:
         self.build_prompt(input)
         response = self.llm.completion(self.prompt)
         return self.process_response(response)

@@ -5,6 +5,7 @@ sys.path.append("../..")
 from groq_model import Llama3_1_70B_Versatile
 from typing import List
 from ExtractCategoriesPhrases import ExtractCategoriesPhrases, QNA
+from pprint import pprint
 
 sleep_data: List[QNA] = [
     {
@@ -69,4 +70,4 @@ sleep_data: List[QNA] = [
 model = Llama3_1_70B_Versatile()
 prompt = ExtractCategoriesPhrases(model)
 
-print(prompt(sleep_data))
+pprint(prompt(sleep_data))

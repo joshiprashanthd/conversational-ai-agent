@@ -2,17 +2,18 @@ from groq_model import GroqModel
 from typing import TypedDict, List
 
 
-class ReachConclusionInput(TypedDict):
+class DictUnit(TypedDict):
     parameter: str
     states: List[str]
     phrases: List[str]
 
+TReachConclusionInput = List[DictUnit]
 
 class ReachConclusion:
     def __init__(self, llm: GroqModel):
         self.llm = llm
 
-    def build_prompt(self, input: List[ReachConclusionInput]):
+    def build_prompt(self, input: TReachConclusionInput):
         self.prompt = """You are an expert mental health professional. You are given patient's input to various questions related to various parameters such as "Noise during sleep". Below are the rules for each parameter that need to follow to reach to a detailed conclusion. Conclusion should only be one paragraph.
 
 Input Description:
@@ -81,7 +82,7 @@ Conclusion:
     def process_response(self, output: str):
         return output
 
-    def __call__(self, input: List[ReachConclusionInput]):
+    def __call__(self, input: TReachConclusionInput):
         self.build_prompt(input)
         response = self.llm.completion(self.prompt)
         return self.process_response(response)

@@ -1,4 +1,4 @@
-from groq_model import Groq
+from groq_model import GroqModel
 from typing import TypedDict, List, Dict, Tuple
 import re
 
@@ -6,14 +6,15 @@ class QNA(TypedDict):
     question: str
     answer: str
 
-class Response(TypedDict):
-    parameters: Dict[str, List[str]]
+TExtractL3ParameterInput = List[QNA]
+
+TExtractL3ParameterResponse = Dict[str, List[str]]
 
 class ExtractL3Parameter:
-    def __init__(self, llm: Groq) -> None:
+    def __init__(self, llm: GroqModel) -> None:
         self.llm = llm
 
-    def build_prompt(self, phrases: List[str], detailed_parameters: List[str]) -> None:
+    def build_prompt(self, phrases: TExtractL3ParameterInput, detailed_parameters: List[str]) -> None:
         self.prompt = """You are an expert mental health professional. Your goal is to read the list of phrases and find out the detailed parameters that best describe each phrase.
 
 Task Instructions:
@@ -49,12 +50,11 @@ Assign each phrase to the most suitable detailed parameter from the given list:
         pattern = escaped_open + r"(.*?)" + escaped_close
         return re.findall(pattern, input_string)
 
-    def process_response(self, response: str) -> List[Tuple[str, List[str]]]:
+    def process_response(self, response: str) -> TExtractL3ParameterResponse:
         parameters_list = self.extract_strings(response, "[")
         phrases_list = self.extract_strings(response, "<")
 
-        # Initialize an empty list for results
-        results = []
+        res: TExtractL3ParameterResponse = {}
 
         # Iterate through phrases and parameters
         for phrase_str in phrases_list:
@@ -63,11 +63,11 @@ Assign each phrase to the most suitable detailed parameter from the given list:
             param_list = []
             for param_str in parameters_list:
                 param_list.extend([param.strip() for param in param_str.split(',')])
-            results.append((phrase, param_list))
+            res[phrase] = param_list
 
-        return results
+        return res
 
-    def __call__(self, phrases: List[str], detailed_parameters: List[str]) -> List[Tuple[str, List[str]]]:
+    def __call__(self, phrases: TExtractL3ParameterInput, detailed_parameters: List[str]) -> TExtractL3ParameterResponse:
         self.build_prompt(phrases, detailed_parameters)
         response = self.llm.completion(self.prompt)
         return self.process_response(response)

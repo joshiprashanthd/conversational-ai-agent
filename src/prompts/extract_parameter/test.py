@@ -5,6 +5,8 @@ from groq_model import Llama3_1_70B_Versatile
 from prompts.extract_parameter.ExtractL1Parameter import ExtractL1Parameter, QNA
 from typing import List, Dict
 from prompts.extract_parameter.ExtractL3Parameter import ExtractL3Parameter
+from pprint import pprint
+
 
 model = Llama3_1_70B_Versatile()
 prompt1 = ExtractL1Parameter(model)
@@ -27,10 +29,6 @@ answers: List[QNA] = [
 
 L1_parameters: List[str] = ['routine', 'sleep', 'diet', 'work', 'personality and inclinations', 'mental state']
 
-#, 'meditation and similar activities', 'env and social'] --> these are skipped
-
-
-# skipped L2_parameters
 L3_parameters: Dict[str, List[str]] = {
     'routine': ['bedtime', 'wakeup time', 'duration', 'consistency', 'duration', 'no. of breaks', 'timings', 'busy-ness', 'intensity', 'stress', 'breaks duration', 'type/details', 'frequency', 'duration', 'intensity', 'consistency', 'timings', 'meal timings', 'meal frequencies', 'hydration level', 'meal quantity', 'breakfast time', 'lunch time', 'dinner time', 'snacks time', 'practices/details', 'duration', 'timings', 'time spent', 'interests', 'activities involved in', 'frequency', 'eating environment', 'bathing', 'teeth brusing', 'env cleanliness', 'clothes washing', 'medications', 'alcohol', 'caffeine', 'drugs', 'smoking', 'tobaco', 'sedentary time', 'commute time', 'commute mode', 'commute ease', 'commute tireness', 'type', 'duration', 'purpose', 'timings'],
 
@@ -47,15 +45,15 @@ L3_parameters: Dict[str, List[str]] = {
 
 }
 
-response = prompt1(answers, L1_parameters)['L1 parameters dict']
+response = prompt1(answers, L1_parameters)
 
 print("Response from ExtractL1Parameter:")
-print(response)
-print("\n")
+pprint(response)
+print()
 
 for key, value in response.items():
     try:
         print(f"Processing key: {key}")
-        print(prompt2(value, L3_parameters[key]))
+        pprint(prompt2(value, L3_parameters[key]))
     except Exception as e:
         print(f"Error processing key {key}: {e}")

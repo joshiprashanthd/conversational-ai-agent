@@ -9,6 +9,7 @@ from prompts.extract_categories_phrases.ExtractCategoriesPhrases import (
     ExtractCategoriesPhrases,
     QNA,
 )
+from pprint import pprint
 
 sleep_data: List[QNA] = [
     {
@@ -78,4 +79,4 @@ output = prompt(sleep_data)
 prompt2 = ReachConclusion(model)
 output2 = prompt2(output)
 
-print(output2)
+pprint(output2)

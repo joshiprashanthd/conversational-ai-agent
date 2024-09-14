@@ -1,4 +1,4 @@
-from groq_model import Groq
+from groq_model import Groq, GroqModel
 from typing import TypedDict, List, Dict
 import re
 
@@ -6,14 +6,15 @@ class QNA(TypedDict):
     question: str
     answer: str
 
-class Response(TypedDict):
-    parameters: Dict[str, List[str]]
+TExtractL1ParameterInput = List[QNA]
+
+TExtractL1ParameterResponse = Dict[str, List[str]]
 
 class ExtractL1Parameter:
-    def __init__(self, llm: Groq) -> None:
+    def __init__(self, llm: GroqModel) -> None:
         self.llm = llm
 
-    def build_prompt(self, answers: List[QNA], parameters: List[str]) -> None:
+    def build_prompt(self, answers: TExtractL1ParameterInput, parameters: List[str]) -> None:
         self.prompt = """You are an expert mental health professional. Your goal is to read patient's answers to some of the questions given and find out the parameter they belong to and extract relevant phrases from the answer which can be useful to assess patient's health state.
 
 Task Instructions:
@@ -62,29 +63,27 @@ Answer: {answer}
         pattern = escaped_open + r"(.*?)" + escaped_close
         return re.findall(pattern, input_string)
 
-    def process_response(self, response: str) -> Response:
+    def process_response(self, response: str) -> TExtractL1ParameterResponse:
         parameters_list = self.extract_strings(response, "[")
         phrases_list = self.extract_strings(response, "<")
 
-        # Ensure both lists are of the same length
         if len(parameters_list) != len(phrases_list):
             raise ValueError("Mismatched number of parameters and phrases.")
 
-        # Create a dictionary to map parameters to phrases
-        parameters_dict = {}
-        
+        parameters_dict: TExtractL1ParameterResponse = {}
+
         for param_str, phrase_str in zip(parameters_list, phrases_list):
             params = [param.strip() for param in param_str.split(',')]
             phrases = [phrase.strip() for phrase in phrase_str.split(',')]
-            
+
             for param in params:
                 if param not in parameters_dict:
                     parameters_dict[param] = []
                 parameters_dict[param].extend(phrases)
 
-        return {"L1 parameters dict": parameters_dict}
+        return parameters_dict
 
-    def __call__(self, answers: List[QNA], parameters: List[str]) -> Response:
+    def __call__(self, answers: TExtractL1ParameterInput, parameters: List[str]) -> TExtractL1ParameterResponse:
         self.build_prompt(answers, parameters)
         response = self.llm.completion(self.prompt)
         return self.process_response(response)

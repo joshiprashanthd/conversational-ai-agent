@@ -9,18 +9,20 @@ class QNA(TypedDict):
     question: str
     answer: str
 
+TExtractCategoriesPhrasesInput = List[QNA]
 
-class Response(TypedDict):
+class DictUnit(TypedDict):
     parameter: str
     states: List[str]
     phrases: List[str]
 
+TExtractCategoriesPhrasesResponse = List[DictUnit]
 
 class ExtractCategoriesPhrases:
     def __init__(self, llm: GroqModel) -> None:
         self.llm = llm
 
-    def build_prompt(self, answers: List[QNA]):
+    def build_prompt(self, answers: TExtractCategoriesPhrasesInput):
 
         self.prompt = """You are an expert mental health professional. Your goal is to read patient's answers to some of the questions given and find out the category (or categories) they belong to and extract relevant phrases from the answer which can be useful to assess patient's mental state.
 
@@ -31,7 +33,7 @@ Task Instructions:
     - Do not repeat answer in your response.
 	- Enclose all the comma separated categories you generate with left bracket [ and right bracket ]
 	- Enclose each the comma separated extracted phrases in left angle bracket < and right angle bracket >.
-	
+
 
 {qnas}
 
@@ -60,11 +62,11 @@ Answer: {answer}
 
         self.prompt = self.prompt.format(qnas=qnas)
 
-    def process_response(self, output: str) -> List[Response]:
+    def process_response(self, output: str) -> TExtractCategoriesPhrasesResponse:
         sections = re.split(r"\n\d+\.\s", output.strip())
         sections = [s.strip() for s in sections if s.strip()]
 
-        result = []
+        result: TExtractCategoriesPhrasesResponse = []
         for section in sections:
             title_match = re.match(r"(.+?)(?:\n|$)", section)
             if not title_match:
@@ -85,7 +87,7 @@ Answer: {answer}
                 if item.strip()
             ]
 
-            res: Response = {
+            res: DictUnit = {
                 "parameter": title,
                 "states": square_bracket_items,
                 "phrases": curly_brace_items,
@@ -94,9 +96,8 @@ Answer: {answer}
 
         return result
 
-    def __call__(self, answers: List[QNA]):
+    def __call__(self, answers: TExtractCategoriesPhrasesInput) -> TExtractCategoriesPhrasesResponse:
         self.build_prompt(answers)
         response = self.llm.completion(self.prompt)
-        print(response)
         responses = self.process_response(response)
         return responses

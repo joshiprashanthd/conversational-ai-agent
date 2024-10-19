@@ -1,7 +1,10 @@
 import json
 import os
+import sys
 
-from groq_model import (
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../")))
+
+from src.groq_model import (
     Llama3_1_8B_Instant,
     Llama3_1_70B_Versatile,
     Llama3_1_405B_Reasoning,

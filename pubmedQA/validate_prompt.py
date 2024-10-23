@@ -1,29 +1,32 @@
-#Prompt 1: Validating Abstract for Question Generation
-#Objective: Check if the given abstract is suitable for generating a meaningful question.
+#Prompt 1: Validating topic for Question Generation
+#Objective: Check if the given topic is related to mental health topics
 
-def validate_abstract(title, abstract):
+import json
+
+def validate_topic(subject, topic):
     prompt = f"""
-    You are a biomedical text evaluator. Your task is to assess whether the provided title and abstract contain enough concrete, interpretable scientific findings to generate a useful question-answer pair. The answer should be either Yes or No.
+    You are a mental health professional evaluating the relevance of a subject and its associated topic. Your task is to assess whether the provided subject and topic are relevant to mental health. The answer should be either Yes or No.
 
-    Instructions:
-    1. If the abstract contains specific research outcomes, results, or evidence, mark it Yes.
-    2. If the abstract is too general, purely theoretical, a review, or lacks interpretable findings, mark it No.
-    3. Provide a short justification explaining your answer, in 1-2 sentences.
+    **Instructions**:
+    1. If the subject and topic are directly related to mental health, mark it **Yes**.
+    2. If the subject and topic are unrelated to mental health, mark it **No**.
+    3. Provide a brief explanation justifying your answer, mentioning how the subject and topic connect (or do not connect) to mental health.
 
-    Input Example:
+    **Input Example**:
+    Subject: "Psychology"
+    Topic: "The Impact of Social Media on Adolescent Mental Health"
 
-    Title: "The Role of Vitamin D in Reducing Inflammation in Elderly Patients"
-    Abstract:
-    "Recent studies have shown a significant correlation between low vitamin D levels and increased inflammatory markers in elderly individuals. In a double-blind clinical trial, elderly patients supplemented with 2000 IU of vitamin D daily showed a 30% reduction in C-reactive protein levels over six months, suggesting the potential of vitamin D in managing chronic inflammation."
+    **Output Format**:
+    - **Answer**: [Yes or No]
+    - **Justification**: [Provide a brief explanation justifying your decision.]
 
-    Expected Output Example:
-    Answer: Yes
-    Justification: The abstract contains concrete findings from a clinical trial with measurable outcomes that can generate a meaningful question-answer pair.
+    **Expected Output Example**:
+    - **Answer**: Yes
+    - **Justification**: The subject is "Psychology," which directly pertains to mental health, and the topic focuses on how social media influences adolescent mental well-being, making it relevant to mental health.
 
-    Now evaluate the title and abstract to determine if it is suitable for generating a question:
-    Title: {title}
-    Abstract: {abstract}
-
+    **Now evaluate the provided Subject and Topic to determine if they are relevant to mental health**:
+    Subject: {subject}
+    Topic: {topic}
     """
 
-    return prompt.format(title=title, abstract=abstract)
+    return prompt.format(subject=subject, topic=topic)

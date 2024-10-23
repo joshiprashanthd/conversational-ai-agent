@@ -3,33 +3,51 @@
 
 def prompt_QA(title, abstract):
 
-    prompt = f""" 
-    You are a biomedical question generator. Your role is to craft a well-formed multiple-choice question (MCQ) from the provided abstract, ensuring the correct answer is based on the scientific findings in the text. Additionally, generate three incorrect but plausible distractor options.
+    prompt = f"""
+    You are a biomedical question generator. Based on the provided title and abstract, generate a fact-based multiple-choice question (MCQ). The question should relate to the title, while the answer and distractors should be based on findings from the abstract. Ensure that all answer options are short and clear, and that the generated question can stand alone without needing to refer back to the abstract.
 
-    Instructions:
-    Question: Formulate a concise yes/no, fact-based, or knowledge-based question aligned with the abstract’s findings.
-    Correct Answer: The correct answer should directly reflect the abstract’s key findings or results.
-    Distractors: Create three plausible incorrect answers that are close to the findings but factually incorrect.
-    Ensure that all answer choices are in similar formats (e.g., all answers as Yes/No or numerical values if applicable).
-    Avoid overly obvious distractors; they should require some reasoning to distinguish from the correct answer.
+    **Instructions**:
+    1. **Question**: Create a factual multiple-choice question (MCQ) that is based on or inspired by the title. Ensure the question is aligned with the research topic indicated by the title.
+    2. **Answer Options (optA, optB, optC, optD)**: Provide four short, clear, and distinct answer options:
+        - One correct answer based on the abstract’s findings.
+        - Three incorrect but plausible distractors derived from the abstract or general knowledge about the topic.
+    3. **Correct Answer**: Identify the correct answer from the options (optA, optB, optC, or optD).
+    4. **Explanation**: Provide a brief explanation that justifies why the correct answer is correct, and explain why the distractors are incorrect.
+    5. **Subject**: Mention the broad subject area (e.g., Biochemistry, Surgery, Anatomy).
+    6. **Topic**: Specify the topic within the subject (e.g., Vitamin Deficiency, Surgical Procedures).
 
-    Input Example:
+    Strictily follow the output format provided below. If the abstract does not contain sufficient information to generate a meaningful question, leave the question field empty.
+    **Output Format**:
+    - Question: [The question text inspired by the title]
+    - optA: [First option]
+    - optB: [Second option]
+    - optC: [Third option]
+    - optD: [Fourth option]
+    - Correct Answer: [e.g., optA]
+    - Explanation: [A brief explanation justifying the correct answer and explaining why the distractors are incorrect.]
+    - Subject: [e.g., Psychology]
+    - Topic: [e.g., Mental Health]
+
+    **Input Example**:
     Title: "The Role of Vitamin D in Reducing Inflammation in Elderly Patients"
-    Abstract:
-    "Recent studies have shown a significant correlation between low vitamin D levels and increased inflammatory markers in elderly individuals. In a double-blind clinical trial, elderly patients supplemented with 2000 IU of vitamin D daily showed a 30% reduction in C-reactive protein levels over six months, suggesting the potential of vitamin D in managing chronic inflammation."
+    Abstract: 
+    "Recent studies show a significant correlation between low vitamin D levels and increased inflammatory markers in elderly individuals. In a clinical trial, patients supplemented with 2000 IU of vitamin D daily showed a 30% reduction in C-reactive protein levels."
 
-    Expected Output Example:
-    Question: Does supplementation with 2000 IU of vitamin D daily reduce inflammatory markers in elderly patients?
-    Correct Answer: Yes
-    Distractor 1: No
-    Distractor 2: Only a reduction in blood pressure was observed.
-    Distractor 3: The study found no difference in inflammation levels after supplementation.
+    **Expected Output Example**:
+    - Question: How does Vitamin D supplementation affect inflammation in elderly patients?
+    - optA: It reduces inflammatory markers by 30%
+    - optB: It has no effect on inflammation
+    - optC: It increases inflammation levels
+    - optD: It only reduces cholesterol levels
+    - Correct Answer: optA
+    - Explanation: The abstract shows that vitamin D supplementation reduced inflammatory markers by 30%. The other options either deny this or mention unrelated effects.
+    - Subject: Biochemistry
+    - Topic: Vitamin D and Inflammation
 
-    stick to the output format to generate a question-answer pair and distractors based on the provided abstract:
-
-    Now generate a question-answer pair and distractors based on the provided abstract:
+    **Now generate a question-answer pair based on the following title and abstract**:
     Title: {title}
     Abstract: {abstract}
     """
 
-    return prompt
+    return prompt.format(title=title, abstract=abstract)
+

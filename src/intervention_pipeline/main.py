@@ -14,7 +14,7 @@ from langchain_core.runnables import RunnablePassthrough
 
 load_dotenv()
 
-llm = ChatGroq(model="llama3-8b-8192")
+llm = ChatGroq(model="llama3-8b-8192", stop_sequences=[])
 
 loader = JSONLoader(
     file_path="../../data/intervention-migrate.json",
@@ -35,9 +35,7 @@ retriever = vectorstore.as_retriever(search_type="similarity", search_kwargs={"k
 
 
 def format_docs(docs):
-    print("\n\nin format docs\n\n\n")
     res = []
-
     template = """Activity: {activity}
 Type: {type}
 Reasoning: {reasoning}

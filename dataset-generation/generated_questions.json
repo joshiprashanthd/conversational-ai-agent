@@ -1,0 +1,338 @@
+{
+    "0": {
+        "pmid": "39423464",
+        "questions": [
+            {
+                "question": "What is the factor structure of the Persian version of the SHAI scores in patients diagnosed with cancer?",
+                "optA": "The SHAI scores have a one-factor structure ",
+                "optB": "The SHAI scores have a two-factor structure ",
+                "optC": "The factor analysis did not confirm the structure of the SHAI scores",
+                "optD": "The factor analysis confirmed a three-factor structure",
+                "correctAnswer": "optB",
+                "explanation": "The abstract mentions that a two-factor model (thought intrusion and fear of illness) provided the best fit for the data. The other options contradict this finding.",
+                "subject": "Psychology",
+                "topic": "Health Anxiety and Cancer"
+            }
+        ]
+    },
+    "1": {
+        "pmid": "39423372",
+        "questions": [
+            {
+                "question": "What is the primary concern related to research engagement of young people with lived expertise in digital mental health research?",
+                "optA": "Limited access to technology prevents them from participating",
+                "optB": "They are not taken seriously due to their age",
+                "optC": "Power imbalances and lack of compensation hinder engagement",
+                "optD": "Young people are not interested in participating in research",
+                "correctAnswer": "optC",
+                "explanation": "The abstract emphasizes that youth with lived experience face challenges such as power imbalances and lack of compensation, which hinders their engagement in research. Options A and B present factual inaccuracies from the provided abstract, and option D is an unrelated concern.",
+                "subject": "Psychology",
+                "topic": "Mental Health Research Involvement"
+            }
+        ]
+    },
+    "2": {
+        "pmid": "39423368",
+        "questions": [
+            {
+                "question": "What is the primary concern about the clinical use of Large Language Models (LLMs) in mental health applications?",
+                "optA": "They are not effective in detecting mental health issues",
+                "optB": "They have the potential to replace human mental health professionals",
+                "optC": "The current risks associated with clinical use might surpass their benefits",
+                "optD": "They are not user-friendly and require extensive training to operate",
+                "correctAnswer": "optC",
+                "explanation": "The abstract highlights several issues, including inconsistencies in generated text, the production of hallucinations, and the absence of a comprehensive, benchmarked ethical framework, indicating that the benefits of LLMs in mental health might not outweigh the risks.",
+                "subject": "Psychology",
+                "topic": "Artificial Intelligence and Mental Health"
+            }
+        ]
+    },
+    "3": {
+        "pmid": "39423225",
+        "questions": [
+            {
+                "question": "What is the duration of the basic income scheme implemented in the Basic Income for Care Leavers in Wales pilot?",
+                "optA": "2 years",
+                "optB": "3 years",
+                "optC": "4 years",
+                "optD": "5 years",
+                "correctAnswer": "optA",
+                "explanation": "The abstract states that the care-experienced young people are receiving \u00a31,600 per month for two years as part of the BIP. The other options provide incorrect durations.",
+                "subject": "Social Work",
+                "topic": "Welfare Policies for Care Leavers"
+            }
+        ]
+    },
+    "4": {
+        "pmid": "39423214",
+        "questions": [
+            {
+                "question": "What key issues affect perceptions of mental health among Somali women in London?",
+                "optA": "Feeling isolated from their community",
+                "optB": "Historical trauma experienced by their ancestors",
+                "optC": "Concerns around judgement, shame, and stigma",
+                "optD": "Unemployment and poor socio-economic status",
+                "correctAnswer": "optC",
+                "explanation": "The abstract specifically highlights that concerns around judgement, shame, and stigma are key issues affecting attitudes towards mental health in this group. While isolation from the community is mentioned, it is not presented as the primary issue. Historical trauma is not mentioned at all, and unemployment/poor socio-economic status is not mentioned as affecting perceptions of mental health in this particular group.",
+                "subject": "Psychology",
+                "topic": "Mental Health and Cultural Barriers"
+            }
+        ]
+    },
+    "5": {
+        "pmid": "39423171",
+        "questions": [
+            {
+                "question": "What percentage of individuals who were part of the \"Bebas Pasung\" program had been re-locked at the two-year follow-up?",
+                "optA": "10%",
+                "optB": "24%",
+                "optC": "50%",
+                "optD": "75%",
+                "correctAnswer": "optB",
+                "explanation": "The abstract states that at follow-up, 24% of the sample had been re-locked. The other options provide incorrect re-lock percentages.",
+                "subject": "Psychology",
+                "topic": "Mental Health and Treatment"
+            }
+        ]
+    },
+    "6": {
+        "pmid": "39423114",
+        "questions": [
+            {
+                "question": "What are the primary challenges faced by military-dependent young adults with Autism Spectrum Disorder during their transition to adulthood?",
+                "optA": "Difficulty accessing mental health services due to frequent relocations and lack of awareness about available resources",
+                "optB": "Struggling to maintain a traditional family structure",
+                "optC": "Financial difficulties related to health care costs",
+                "optD": "Lack of motivation due to the transition from school to employment",
+                "correctAnswer": "optA",
+                "explanation": "According to the abstract, military-dependent young adults with ASD face barriers to services, which includes frequent relocations and lacking awareness of available resources. The other options either are incomplete or unrelated to the actual challenges faced by the young adults.",
+                "subject": "Psychology",
+                "topic": "Autism Spectrum Disorder and Transition to Adulthood"
+            }
+        ]
+    },
+    "7": {
+        "pmid": "39423057",
+        "questions": [
+            {
+                "question": "What is the main focus of the preference for non-pharmacological interventions?",
+                "optA": "It includes the use of computer-based therapy as an alternative to medication.",
+                "optB": "It primarily consists of making lifestyle changes to prevent medication use.",
+                "optC": "It primarily consists of making no changes and continuing to use medication as before.",
+                "optD": "It involves a combination of pharmacological and non-pharmacological methods.",
+                "correctAnswer": "optB",
+                "explanation": "The title and abstract suggest the study focuses on non-pharmacological interventions. Option B directly relates to lifestyle changes that can prevent one's need for medication. Options A, C, and D either partially (A) or fully (C and D) move away from this concept or confuse it with other approaches.",
+                "subject": "Psychology",
+                "topic": "Non-Pharmacological Interventions"
+            }
+        ]
+    },
+    "8": {
+        "pmid": "39423009",
+        "questions": [
+            {
+                "question": "What was a promising development in the treatment of depression identified by the authors of this systematic review?",
+                "optA": "The effectiveness of mobile apps containing CBT",
+                "optB": "Chatbots for improvising depression symptoms",
+                "optC": "Mobile apps with cognitive functions only",
+                "optD": "A correlation between sleep disorders and anxiety",
+                "correctAnswer": "optB",
+                "explanation": "The abstract highlights that the review found significant advantages in improving depression symptoms in studies related to chatbots. This indicates that chatbots demonstrated notable improvements or a positive impact on depression symptoms.",
+                "subject": "Psychology",
+                "topic": "Mental Health and Mobile Apps"
+            }
+        ]
+    },
+    "9": {
+        "pmid": "39423001",
+        "questions": [
+            {
+                "question": "How is the Framework for AI Tool Assessment in Mental Health used?",
+                "optA": "It evaluates AI mental health platforms solely based on clinical standards",
+                "optB": "It grades AI platforms on credibility, user experience, crisis management, user agency, and more",
+                "optC": "It prioritizes transparency in AI mental health tools over user-centricity and health equity",
+                "optD": "It is used solely for evaluating user input on mental health platforms",
+                "correctAnswer": "optB",
+                "explanation": "The abstract shows that FAITA-Mental Health is used to grade AI mental health platforms on the key domains including credibility, user experience, crisis management, user agency, health equity, and transparency. FAITA-Mental Health is also identified as the correct answer by its recently introduction to the field and descriptions in the abstract as recently introduced. The other options are incorrect due to either partially incomplete, prioritization, selection, among a listing of such evaluation domains to or either incorrect use case.",
+                "subject": "Psychology",
+                "topic": "AI Tools in Mental Health"
+            }
+        ]
+    },
+    "10": {
+        "pmid": "39422996",
+        "questions": [
+            {
+                "question": "What contributed to symptom reduction in a blended care therapy program?",
+                "optA": "Only client digital engagement",
+                "optB": "Only synchronous video sessions",
+                "optC": "Provider feedback and guidance between sessions",
+                "optD": "Neither of the above led to symptom reduction",
+                "correctAnswer": "optC",
+                "explanation": "The abstract shows that provider feedback messaging in the past 7 days and in the past 8-14 days was significantly associated with lower GAD-7 and PHQ-9 scores. While synchronous video sessions and client digital engagement also contributed to symptom reduction, the presence of provider feedback beyond these factors provided significant benefit. ",
+                "subject": "Psychology",
+                "topic": "Blended Care Therapy and Anxiety/Depression"
+            }
+        ]
+    },
+    "11": {
+        "pmid": "39422993",
+        "questions": [
+            {
+                "question": "What is a key component of the proposed macro-micro personalization framework for mental health monitoring?",
+                "optA": "Multimodal learning",
+                "optB": "Dynamic Restrained Uncertainty Weighting method",
+                "optC": "Transformer-based macro-level emotion embeddings only",
+                "optD": "Conventional rule-based decision making",
+                "correctAnswer": "optB",
+                "explanation": "The abstract highlights the Dynamic Restrained Uncertainty Weighting method as a key component of the proposed macro-micro personalization framework, designed to effectively integrate various data types for a balanced representation of emotional states. Options A and C are incomplete representations of the framework, while option D is unrelated to the proposed framework.",
+                "subject": "Computer Science",
+                "topic": "Artificial Intelligence for Mental Health Monitoring"
+            }
+        ]
+    },
+    "12": {
+        "pmid": "39422988",
+        "questions": [
+            {
+                "question": "What was the adherence rate to saliva sample collection among participants in the field training exercise?",
+                "optA": "100%",
+                "optB": "98%",
+                "optC": "75%",
+                "optD": "95%",
+                "correctAnswer": "optB",
+                "explanation": "The abstract states that 98% of participants provided saliva samples at the second time point.",
+                "subject": "Psychology",
+                "topic": "Military Stress and Readiness"
+            }
+        ]
+    },
+    "13": {
+        "pmid": "39422975",
+        "questions": [
+            {
+                "question": "What is an integrated approach to treat comorbid traumatic brain injury and post-traumatic stress disorder (PTSD) in service members?",
+                "optA": "A trauma-informed care (TIC) model that considers diagnostic and treatment considerations",
+                "optB": "A framework based on individualized clinical judgments without standardized guidelines",
+                "optC": "A strict adherence to the existing mental health treatment plans only",
+                "optD": "A pharmacological approach that focuses solely on PTSD without consideration of TBI symptoms",
+                "correctAnswer": "optA",
+                "explanation": "The abstract recommends the use of a Trauma-informed care (TIC) model that considers diagnostic and treatment considerations to address the cognitive and psychological health needs of warfighters with comorbid TBI and PTSD. The other options either focus on one aspect of treatment, or seem to lack systematic approaches.",
+                "subject": "Psychology",
+                "topic": "Traumatic Brain Injury and Mental Health in Military Populations"
+            }
+        ]
+    },
+    "14": {
+        "pmid": "39422967",
+        "questions": [
+            {
+                "question": "What characteristic is consistent in individuals with Parkinson's Disease as observed through naturalistic eye movement tasks?",
+                "optA": "Longer fixation durations and smaller saccadic amplitudes",
+                "optB": "Larger saccadic amplitudes than healthy individuals",
+                "optC": "Equivalent fixation durations between individuals with PD and healthy aging",
+                "optD": "Reduced eye movement tracking speed compared to healthy individuals",
+                "correctAnswer": "optA",
+                "explanation": "The abstract highlights that naturalistic eye movement tasks show consistent findings of longer fixation durations and smaller saccadic amplitudes in individuals with PD compared to healthy aging. The other options either mention opposite effects (B, D) or claim there is no difference (C), which contradicts the findings in the abstract.",
+                "subject": "Neuroscience",
+                "topic": "Parkinson's Disease"
+            }
+        ]
+    },
+    "15": {
+        "pmid": "39422875",
+        "questions": [
+            {
+                "question": "What factors are likely to influence work engagement in firefighters during the COVID-19 pandemic?",
+                "optA": "High levels of resilience and service motivation",
+                "optB": "Exposure to verbal abuse from civilians and conflict with coworkers",
+                "optC": "Physical condition and mental health",
+                "optD": "Age and work experience",
+                "correctAnswer": "optA",
+                "explanation": "The abstract indicates that resilience and service motivation have a positive impact on firefighters' work engagement. The other options either mention secondary causes of stress or unrelated factors.",
+                "subject": "Psychology",
+                "topic": "Workplace Performance"
+            }
+        ]
+    },
+    "16": {
+        "pmid": "39422850",
+        "questions": [
+            {
+                "question": "Can 3% hypertonic saline administration benefit intracerebral hemorrhage (ICH) treatment?",
+                "optA": "Yes, it reduces edema and improves patient outcomes",
+                "optB": "It has no effect on ICH treatment",
+                "optC": "It worsens edema and increases intracranial pressure",
+                "optD": "It only improves neurological deficits in some patients",
+                "correctAnswer": "optB",
+                "explanation": "The abstract clearly states that administration of 3% hypertonic saline showed \"no benefit\" in the treatment of ICH. Also, the abstract mentions that it could cause paradoxical cellular swelling. Therefore, options A and D are incorrect as they suggest it has beneficial effects. Option C is also incorrect since it has no significant impact and doesn't worsen edema in this context.",
+                "subject": "Anatomy",
+                "topic": "Brain Hemorrhage and Edema"
+            }
+        ]
+    },
+    "17": {
+        "pmid": "39422783",
+        "questions": [
+            {
+                "question": "What distinguishes the brain structures of young adults who are late risers from those of early risers?",
+                "optA": "Thinner cortical thickness in the left pars orbitalis and lower cortical mean curve in the right paracentral gyrus",
+                "optB": "Thicker cortical thickness in the left pars orbitalis and higher cortical mean curve in the right paracentral gyrus",
+                "optC": "Similar brain structures across late and early risers",
+                "optD": "Increased gray matter density in regions associated with circadian rhythm regulation",
+                "correctAnswer": "optA",
+                "explanation": "The abstract describes how late chronotype young adults exhibited thinner cortical thickness of left pars orbitalis and lower cortical mean curve of right paracentral gyrus, distinctly from early chronotype young adults. Options B and D are opposite or different from the findings presented in the abstract, while option C denies the observed differences in brain structures between late and early risers.",
+                "subject": "Neuroscience",
+                "topic": "Chronotypes and Brain Structure"
+            }
+        ]
+    },
+    "18": {
+        "pmid": "39422763",
+        "questions": [
+            {
+                "question": "What type of strategies do asylum-seeker women use to cope with stress after migration?",
+                "optA": "Primarily emotion-focussed strategies",
+                "optB": "Both emotion-focussed and problem-solving strategies",
+                "optC": "Primarily problem-solving strategies",
+                "optD": "They do not use any coping strategies",
+                "correctAnswer": "optB",
+                "explanation": "The abstract states that all 17 participants described employing both emotion-focussed strategies (such as positive thinking) and problem-solving strategies (like seeking support) to maintain their mental wellbeing. While emotion-focussed strategies helped temporarily, problem-solving strategies allowed them to address ongoing challenges.",
+                "subject": "Psychology",
+                "topic": "Mental Health in Asylum Seekers"
+            }
+        ]
+    },
+    "19": {
+        "pmid": "39422712",
+        "questions": [
+            {
+                "question": "What is the primary effect of suicide exposure on adolescents?",
+                "optA": "It increases the risk of depression and anxiety but has no significant effect on suicidal ideation",
+                "optB": "It directly increases the risk of suicidal ideation",
+                "optC": "It has no significant effect on adolescents' mental health",
+                "optD": "It increases the risk of depression but has no direct effect on anxiety symptoms",
+                "correctAnswer": "optA",
+                "explanation": "Although the study found that suicide exposure has a strong positive association with suicidal ideation, the abstract shows that suicide exposure increases the risk of both depression and anxiety, not just suicidal ideation. Option C is incorrect because it contradicts the abstract's findings. Option D is a partial correct answer but it is not entirely accurate and the primary effect of suicide exposure involves both depression and anxiety.",
+                "subject": "Psychology",
+                "topic": "Suicide Exposure and Mental Health in Adolescents"
+            }
+        ]
+    },
+    "20": {
+        "pmid": "3",
+        "questions": [
+            {
+                "question": "How can one improve dancing skills?",
+                "optA": "By practicing slowly and effectively",
+                "optB": "By increasing overall mobility",
+                "optC": "By consuming unhealthy amounts of food",
+                "optD": "By neglecting to dance altogether",
+                "correctAnswer": "optA",
+                "explanation": "The abstract suggests starting slow is beneficial for dancing skills, indicating a need for effective practice, and a reference to the word 'practice' is not given. Option C and D are unrelated to improving dancing and do not align with the abstract's suggestions.",
+                "subject": "Physical Education",
+                "topic": "Dance Techniques"
+            }
+        ]
+    }
+}

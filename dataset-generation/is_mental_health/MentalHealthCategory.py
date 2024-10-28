@@ -14,7 +14,7 @@ class MentalHealthCategory:
     def build_prompt(self, publications: List[Publication]):
         self.prompt = """You are a medical expert. Your goal is to identify the mental health disorder an abstract of a research paper talks about.
 
-Mental health category we are interested are Stree, Trauma, Anxiety and Depression.
+Mental health category we are interested are Stress, Trauma, Anxiety and Depression.
 
 Task Instruction:
     - You will be given an id, title and abstract of the research paper.

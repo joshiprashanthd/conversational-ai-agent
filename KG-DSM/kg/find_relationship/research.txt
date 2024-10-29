@@ -1,0 +1,17 @@
+assessed_in  => symptom -> metric
+has_metric => disorder -> metric
+prevents => prevention -> disorder
+relieves => relievers -> symptoms
+causes => etiological factors -> symptoms, etiological factors -> disorder
+may_contribute_to => distal factor => disorder
+increases_severity_of => risk factors -> symptom
+treats => treatment -> disorder
+indicates => symptom -> disorders
+prevalent_in => disorder -> population_group
+
+second level relations:
+first find relation between causes and symptoms and symptoms and disorders
+then you try to find relation between causes and disorders
+
+Causes: guaranteed to cause a symptom
+Risk Factor: may or may not be a cause or contribute to a symptom negatively

@@ -1,6 +1,7 @@
 from pubmed_dataset_generation.Dataset import Publication
 from typing import List
 from lib.groq_model import GroqModel
+import re
 
 
 class MedicineCategory:

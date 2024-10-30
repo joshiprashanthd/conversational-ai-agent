@@ -19,7 +19,7 @@ class GenerateIntervention:
     def __init__(self, llm: GroqModel):
         self.llm = llm
 
-    def build_prompt(self, input: Input):
+    def build_prompt(self, input: TGenerateInteventionInput):
         self.prompt = """We are gathering information about patient's sleep health. This information consist of various parameters each having some categories. A category describes the broad state of patient's sleep health in terms of the parameter.
 
 Your goal is to make (reason, activity) pairs. An activity should be created such that it somehow changes the state of parameter from on category to another category.
@@ -77,4 +77,8 @@ Output:"""
     ) -> TGenerateInterventionResponse:
         self.build_prompt(input)
         response = self.llm.completion(self.prompt)
+
+        if not response:
+            raise ValueError("No response from the model")
+
         return self.process_response(response)

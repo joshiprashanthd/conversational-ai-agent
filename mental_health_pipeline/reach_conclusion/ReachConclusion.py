@@ -87,4 +87,8 @@ Conclusion:
     def __call__(self, input: TReachConclusionInput):
         self.build_prompt(input)
         response = self.llm.completion(self.prompt)
+
+        if not response:
+            raise ValueError("No response from the model")
+
         return self.process_response(response)

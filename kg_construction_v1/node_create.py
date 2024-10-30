@@ -85,6 +85,9 @@ FacultyResponse = """
 nature_result = model1.completion(prompt(NatureResponse, "Nature"))
 faculty_result = model1.completion(prompt(FacultyResponse, "Faculty"))
 
+if nature_result is None or faculty_result is None:
+    raise ValueError("Model1 failed to generate response.")
+
 nature_nodes = nature_result.strip().split("\n")
 faculty_nodes = faculty_result.strip().split("\n")
 nodes_dict = {"Nature": nature_nodes, "Faculty": faculty_nodes}

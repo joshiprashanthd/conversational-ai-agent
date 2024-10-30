@@ -1,7 +1,6 @@
 import pandas as pd
 import json
 import os
-import csv
 
 
 def generate_json(file_name):
@@ -29,5 +28,6 @@ def generate_json(file_name):
 
 
 csv_files = [file for file in os.listdir(".") if os.path.splitext(file)[1] == ".csv"]
+
 for csv_file in csv_files:
     generate_json(csv_file)

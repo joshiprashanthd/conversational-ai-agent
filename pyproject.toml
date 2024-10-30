@@ -1,3 +1,4 @@
 [tool.pyright]
 venvPath = "/home/jastorj/miniconda3/envs/"
 venv = "mtpenv"
+sourceRoots = ["./"]

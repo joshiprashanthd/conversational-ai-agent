@@ -1,7 +1,7 @@
 import json
 import os
-from QA_prompt import prompt_QA
-from validate_prompt import validate_topic
+from pubmed_dataset_generation_v1.QA_prompt import prompt_QA
+from pubmed_dataset_generation_v1.validate_prompt import validate_topic
 import sys
 import re
 

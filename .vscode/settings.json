@@ -7,7 +7,7 @@
     "PYTHONPATH": "${env:PYTHONPATH};${workspaceFolder}"
   },
   "terminal.integrated.env.linux": {
-    "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}:${workspaceFolder}/lib:${workspaceFolder}/kg_construction"
+    "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}"
   },
   "terminal.integrated.env.windows": {
     "PYTHONPATH": "${env:PYTHONPATH};${workspaceFolder}"

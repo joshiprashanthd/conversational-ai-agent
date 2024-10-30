@@ -1,11 +1,7 @@
-import sys, re
-
-sys.path.append("../../")
-
 import re
 from typing import List
 from lib.groq_model import GroqModel
-from kg.types import Entity, Relationship
+from kg_construction.kg.types import Entity, Relationship
 
 
 class FindRelationship:
@@ -133,8 +129,11 @@ Entity Type: {type}
             relationships.append(relationship)
         return relationships
 
-    def __call__(self, text: str):
-        self.build_prompt(text
+    def __call__(self, text: List[Entity]):
+        self.build_prompt(text)
         response = self.llm.completion(self.prompt)
-        print("RESPONSE: ", response)
+
+        if not response:
+            raise ValueError("No response from the model")
+
         return self.parse_response(response)

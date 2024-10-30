@@ -1,6 +1,5 @@
 import re
-
-from Dataset import Publication
+from pubmed_dataset_generation.Dataset import Publication
 from typing import List
 from lib.groq_model import GroqModel
 

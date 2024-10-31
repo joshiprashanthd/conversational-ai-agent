@@ -8,7 +8,7 @@ from lib.groq_model import Llama3_1_8B_Instant
 from pprint import pprint
 from tqdm import tqdm
 
-json_file_path = "../../full_diagnostic_criterias/depressive-disorder.jsonl"
+json_file_path = "/home/jastorj/Workspace/genai/kg_construction/scraping/full_diagnostic_criterias/depressive-disorder.jsonl"
 target_json_path = "./extracted_entities.jsonl"
 
 data = []
@@ -34,12 +34,11 @@ with open(target_json_path, "w") as f:
     for d in tqdm(data):
         res = {"title": d["title"]}
 
-        text = ""
-        for key, value in d["text"].items():
-            text += (
-                "### " + key + " ###" + "\n\n"
-            )  # add title of the section as well to the text
+        text = "### TITLE = " + d["title"] + " ###" + "\n\n"
 
+        for key, value in d["text"].items():
+
+            text += "### SUBTITLE = " + key + " ###" + "\n\n"
             if any(k in key for k in target_keys):
                 text += value
             text += value

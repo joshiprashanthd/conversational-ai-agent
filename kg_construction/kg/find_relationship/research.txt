@@ -15,3 +15,8 @@ then you try to find relation between causes and disorders
 
 Causes: guaranteed to cause a symptom
 Risk Factor: may or may not be a cause or contribute to a symptom negatively
+
+
+prognostic factors => can they be linked with symptoms?
+disorder => diagnostic features -> prognostic factors
+

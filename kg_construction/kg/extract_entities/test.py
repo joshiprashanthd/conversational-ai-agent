@@ -26,6 +26,7 @@ target_keys = [
     "diagnostic_features",
     "comorbidity",
     "functional_consequences",
+    "risk_and_prognostic_factors",
 ]
 
 
@@ -35,6 +36,10 @@ with open(target_json_path, "w") as f:
 
         text = ""
         for key, value in d["text"].items():
+            text += (
+                "### " + key + " ###" + "\n\n"
+            )  # add title of the section as well to the text
+
             if any(k in key for k in target_keys):
                 text += value
             text += value

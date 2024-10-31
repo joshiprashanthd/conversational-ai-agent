@@ -9,7 +9,7 @@ with open("./extracted_relationships.jsonl", "r") as f:
 relationships = []
 
 for d in data:
-    relationships.extend(d["entities"])
+    relationships.extend(d["relationships"])
 
 # Create a directed graph
 G = nx.DiGraph()
